@@ -1,0 +1,77 @@
+{
+  "@@locale": "en",
+  "appTitle": "Karyalok",
+  "dashboardTitle": "CIVIC ISSUE REPORT SYSTEM",
+  "welcomeBack": "Welcome Back",
+  "reportNewIssue": "Report New Issue",
+  "myReports": "My Reports",
+  "profile": "Profile",
+  "settings": "Settings",
+  "logout": "Logout",
+  "helpSupport": "Help & Support",
+  "language": "Language",
+  "login": "Login",
+  "signup": "Sign Up",
+  "email": "Email Address",
+  "password": "Password",
+  "loginSubtitle": "Sign in to continue reporting issues",
+  "signupSubtitle": "Join us to make a difference",
+  "dontHaveAccount": "Don't have an account? ",
+  "alreadyHaveAccount": "Already have an account? ",
+  "submit": "Submit",
+  "dashboard": "Dashboard",
+  "close": "Close",
+  "cancel": "Cancel",
+  "notificationsEmpty": "No new notifications",
+  "helpTitle": "How to report an issue:",
+  "helpSteps": "1. Select issue category\n2. Add location details\n3. Write description\n4. Add photos/videos\n5. Submit report",
+  "supportContact": "For technical support, contact: support@civicreporter.com",
+  "settingsFuture": "Settings panel will be available in future updates.",
+  "logoutConfirm": "Are you sure you want to logout?",
+  "reportTitle": "REPORT YOUR ISSUE",
+  "locationLabel": "Location",
+  "locationHint": "Enter location...",
+  "getLocationTooltip": "Get current location",
+  "descriptionLabel": "Description",
+  "descriptionHint": "Describe the issue in detail...",
+  "addPhotosLabel": "Add Photos",
+  "uploadPhotos": "Upload Photos",
+  "photoSpecs": "JPG, PNG up to 10MB",
+  "voiceRecording": "Voice Recording",
+  "videoAttachment": "Video Attachment",
+  "takePhoto": "Take Photo",
+  "uploadVideo": "Upload Video",
+  "recordVoice": "Record Voice",
+  "submitReport": "Submit Report",
+  "submittingReport": "Submitting report...",
+  "reportSuccessTitle": "Success!",
+  "reportSuccessMessage": "Your report has been submitted successfully! You can track its progress in the Reports section.",
+  "viewReports": "View Reports",
+  "locationError": "Unable to get current location. Please enter manually.",
+  "locationSuccess": "Location retrieved successfully!",
+  "photoSuccess": "Photo added successfully!",
+  "errorGeneric": "Error: {error}",
+  "voiceRecordingAttached": "Voice recording attached!",
+  "loading": "Loading...",
+  "duration": "Duration: {minutes}:{seconds}",
+  "@duration": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "seconds": {
+        "type": "String"
+      }
+    }
+  },
+  "fileSize": "Size: {sizeInMB} MB",
+  "@fileSize": {
+    "placeholders": {
+      "sizeInMB": {
+        "type": "String"
+      }
+    }
+  },
+  "searchReports": "Search reports...",
+  "noReportsFound": "No reports found matching your criteria."
+}

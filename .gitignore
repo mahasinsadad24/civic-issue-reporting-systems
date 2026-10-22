@@ -1,0 +1,85 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+backend/ai_service/venv/
+backend/ai_service/__pycache__/
+
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+.pub-cache/
+.pub/
+
+# System
+.DS_Store
+Thumbs.db
+
+# MinIO
+minio-data/
+backend/uploads/
+
+# Additional sensitive files
+dashboard/.env
+app/android/key_info.txt
+
+# Ignore IntelliJ IDEA files
+*.iml
+*.lock
+*.tmp
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and virtual environments
+node_modules/
+.venv/
+
+# Android signing secrets and build files
+**/key_info.txt
+**/*.jks
+**/*.keystore
+**/key.properties
+**/.gradle/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# Local environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Firebase configuration - review before sharing
+**/google-services.json
+
+# Generated Flutter files
+app/ios/Flutter/*.xcconfig
+app/ios/Flutter/ephemeral*/
+app/.flutter-plugins-dependencies*
+
+# Firebase configuration
+app/lib/firebase_options.dart
+
+# Generated Flutter environment scripts
+app/ios/Flutter/flutter_export_environment*

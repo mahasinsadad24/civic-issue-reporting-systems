@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # 1. MongoDB
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # 2. MinIO Storage
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER:${MINIO_ROOT_USER:?Set MINIO_ROOT_USER in your private environment}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?Set MINIO_ROOT_PASSWORD in your private environment}
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+
+  # 3. AI Service
+  ai_service:
+    build: ./backend/ai_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/ai_service:/app
+
+  # 4. Backend API
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://mongo:27017/civic-issues
+      - MINIO_ENDPOINT=minio
+      - MINIO_PORT=9000
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY:?Set MINIO_SECRET_KEY in your environment}
+      - AI_SERVICE_URL=http://ai_service:8000
+    depends_on:
+      - mongo
+      - minio
+      - ai_service
+
+  # 5. Frontend Dashboard
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "5173:80" # Map host 5173 to container 80 (nginx)
+    environment:
+      - VITE_API_URL=http://localhost:3000/api # Browser accesses backend via host localhost
+
+volumes:
+  mongo_data:
+  minio_data:
